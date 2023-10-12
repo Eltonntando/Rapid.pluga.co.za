@@ -4,13 +4,15 @@
   <link rel="shortcut icon" type="x-icon" href="Images/Pluga Logo3.png">
 	<title>projects</title>
 	<link rel="stylesheet" href="pluga.css" />
+	<link rel="stylesheet" href="main.css" />
+
 	<!-- Font Awesome icon cdn -->
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
 	integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 	<script src="https://kit.fontawesome.com/61003df5a9.js" crossorigin="anonymous"></script>
-
-
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <style>
     .share-button {
       background-color: #4CAF50;
@@ -49,7 +51,7 @@
 		}
 
 		function shareLink(platform) {
-			var linkToShare = "https://rapid.netlify.app/projects.html"; // Replace with your link to share
+			var linkToShare = "https://rapid-profiled.netlify.app/projects.html"; // Replace with your link to share
 			var socialUrl;
 
 			if (platform === 'facebook') {
@@ -84,21 +86,27 @@
 					<i class="fa-solid fa-house"></i>Home
 				</button>
 			</div>
-			<hr>
 			
-				
+			
+		<!-- Insert site/plug sharing links -->
+
 <div class="share-button" onclick="showSocialPlatforms()"><i class="fas fa-share"></i>Share Plug</div>
   <div class="social-platforms">
-    <a href="https://rapid.netlify.app/projects.html" onclick="shareLink('facebook')"><i class="fab fa-facebook" style="color: blue"></i></a>
-    <a href="https://rapid.netlify.app/projects.html" onclick="shareLink('instagram')"><i class="fab fa-instagram" style="color: purple"></i></a>
-    <a href="https://rapid.netlify.app/projects.html" onclick="shareLink('email')"><i class="fas fa-envelope" style="color: red"></i></a>
-    <a href="https://rapid.netlify.app/projects.html" onclick="shareLink('whatsapp')"><i class="fab fa-whatsapp" style="color: green"></i></a>
+    <a href="https://rapid-profiled.netlify.app/projects.html" onclick="shareLink('facebook')"><i class="fab fa-facebook" style="color: blue; font-size: 70px;"></i></a>
+    <a href="https://rapid-profiled.netlify.app/projects.html" onclick="shareLink('instagram')"><i class="fab fa-instagram" style="color: purple; font-size: 70px;"></i></a>
+    <a href="https://rapid-profiled.netlify.app/projects.html" onclick="shareLink('email')"><i class="fas fa-envelope" style="color: red; font-size: 70px;"></i></a>
+    <a href="https://rapid-profiled.netlify.app/projects.html" onclick="shareLink('whatsapp')"><i class="fab fa-whatsapp" style="color: green; font-size: 70px;"></i></a>
   </div>
+
+
 <div class="selection-links" style="align-items: center;">
   <div class="link new-link" style="text-align: center;">
 <div class="items" style="text-align: center;">
 
 <h3 style="text-align: center; color: black; margin-bottom: 5px;">MY PROJECTS</h3>
+
+
+<!-- Insert site owner's sound cloud/spotify/apple music projects, including other links -->
 
 <div style="background-color: white; ">
 <h3 style="text-align: center; color: black; margin-bottom: 5px;">MUSIC</h3>
@@ -168,5 +176,6 @@
 </div>
 </footer>
 <script src="pluga.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
