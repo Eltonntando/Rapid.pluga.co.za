@@ -102,6 +102,9 @@ button:nth-child(2) i{
 button:nth-child(3) i{
 	margin-right: 15px;
 }
+button:nth-child(4) i{
+	margin-right: 15px;
+}
 button:last-child i{
 	margin-right: 15px;
 }
