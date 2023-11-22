@@ -1,30 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="shortcut icon" type="x-icon" href="Images/Pluga Logo3.png">
-	<title>projects</title>
-	<link rel="stylesheet" href="pluga.css" />
-	<link rel="stylesheet" href="main.css" />
+		<link rel="shortcut icon" type="x-icon" href="Images/Pluga Logo3.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
 
-	<!-- Font Awesome icon cdn -->
-	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-	integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-	<script src="https://kit.fontawesome.com/61003df5a9.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!-- custom css  -->
+    <link rel="stylesheet" href="site.css" />
+    <link rel="stylesheet" href="main.css" />
 
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <style>
+    <!-- font awesome cdn  -->
+  <script src="https://kit.fontawesome.com/46b7ceee20.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <script src="https://kit.fontawesome.com/61003df5a9.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    
+
+
+<style>
     .share-button {
       background-color: #4CAF50;
       color: white;
-      padding: 10px;
       border: none;
+      padding: 10px;
       border-radius: 14px;
       cursor: pointer;
       display: inline-block;
-      align-self: left;
-      margin-right: 70%;
-      margin-bottom: 5%;
+      margin-bottom: 10px;
+      margin-left: 10%;
+      margin-top: 12px;
     }
 
     .social-platforms {
@@ -36,6 +47,8 @@
       justify-content: center;
       align-items: center;
       margin-top: 10px;
+      padding-bottom: 10px;
+      margin-right: 5px;
     }
 
     .social-platforms a {
@@ -44,66 +57,90 @@
       font-size: 30px;
     }
   </style>
-	<script>
-		function showSocialPlatforms() {
-			const socialPlatforms = document.querySelector('.social-platforms');
-			socialPlatforms.classList.toggle('show');
-		}
+  <script>
+    function showSocialPlatforms() {
+      const socialPlatforms = document.querySelector('.social-platforms');
+      socialPlatforms.classList.toggle('show');
+    }
 
-		function shareLink(platform) {
-			var linkToShare = "https://rapid-profiled.netlify.app/projects.html"; // Replace with your link to share
-			var socialUrl;
+    function shareLink(platform) {
+      var linkToShare = "https://avatar-pluga.netlify.app/projects.html"; // Replace with your link to share
+      var socialUrl;
 
-			if (platform === 'facebook') {
-				socialUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(linkToShare);
-			} else if (platform === 'instagram') {
-				socialUrl = 'https://www.instagram.com/share?url=' + encodeURIComponent(linkToShare);
-			} else if (platform === 'email') {
-				socialUrl = 'mailto:?body=' + encodeURIComponent(linkToShare);
-			} else if (platform === 'whatsapp') {
-				socialUrl = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(linkToShare);
-			}
+      if (platform === 'facebook') {
+        socialUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(linkToShare);
+      } else if (platform === 'instagram') {
+        socialUrl = 'https://www.instagram.com/share?url=' + encodeURIComponent(linkToShare);
+      } else if (platform === 'email') {
+        socialUrl = 'mailto:?body=' + encodeURIComponent(linkToShare);
+      } else if (platform === 'whatsapp') {
+        socialUrl = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(linkToShare);
+      }
 
-			window.open(socialUrl, '_blank');
-		}
-	</script>
+      window.open(socialUrl, '_blank');
+    }
+  </script>
+
+
 
 </head>
 <body>
+    <!-- home page  -->
+    <div style="hight: 100%; width: 80%; align-self: center; margin-left: 10%;">
+        <!-- header section  -->
+        <div class="header-section">
+            <!-- header logo  -->
+            <div class="header-logo">
+                <h1>RapidTheTeller.</h1>
+            </div>
+
+            <!-- header navigation  -->
+            <div class="header-nav">
+                <div class="mobile-nav-bar">
+                    <i class="fa-solid fa-bars" id="mobile-nav-bar-icon"></i>
+                </div>
+                <ul class="header-nav-list" id="header-nav-list">
+
+                	<li class="header-nav-tab">
+                        <a href="projects.html" >Music</a>
+                    </li >
+
+                    <li class="header-nav-tab">
+                        <a href="index.html" >Home</a>
+                    </li >
+                    <li class="header-nav-tab ">
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                  
+                    <li class="header-nav-tab">
+                        <a href="selling2.html">Services</a>
+                    </li>
+                    <li class="header-nav-tab">
+                        <a href="selling.html">Merch</a>
+                    </li>
+                    <li class="header-nav-tab">
+                        <a href="booking.html" >Bookings</a>
+                    </li >
+                    
+                    <span class="highlight"></span>
+                </ul>
+
+                <div style="margin-left: 16px;" class="mode-change">
+                    <i class="fa-solid fa-moon" id="mode-change"></i>
+                </div>
+            </div>
+        </div>
+        
+
+      <div class="gallaries" style="text-align: center;">
+        <h1 style="margin-bottom: 27px; margin-top: 27px;">Projects</h1>
+<div class="covered" style="display: flex;">
+
+<!-- Insert site owner's projects -->
+
+<div style="width: 100%; height: 100%; text-align: center;" class="box">
 
 
-	<div class="wrapper">
-		<div class="page">
-	<div class="cover" style="height: auto; width: auto; background-color: transparent; border-radius: 95px; margin-top: 20px;">
-		</div>
-
-			<div class="buttons" style="text-align: center;">
-				<button onclick="window.location.href='gallery.html';">
-					<i class="fa-solid fa-image"></i>Gallery
-				</button>
-
-			<button onclick="window.location.href='index.html';">
-					<i class="fa-solid fa-house"></i>Home
-				</button>
-			</div>
-			
-			
-		<!-- Insert site/plug sharing links -->
-
-<div class="share-button" onclick="showSocialPlatforms()"><i class="fas fa-share"></i>Share Plug</div>
-  <div class="social-platforms">
-    <a href="https://rapid-profiled.netlify.app/projects.html" onclick="shareLink('facebook')"><i class="fab fa-facebook" style="color: blue; font-size: 70px;"></i></a>
-    <a href="https://rapid-profiled.netlify.app/projects.html" onclick="shareLink('instagram')"><i class="fab fa-instagram" style="color: purple; font-size: 70px;"></i></a>
-    <a href="https://rapid-profiled.netlify.app/projects.html" onclick="shareLink('email')"><i class="fas fa-envelope" style="color: red; font-size: 70px;"></i></a>
-    <a href="https://rapid-profiled.netlify.app/projects.html" onclick="shareLink('whatsapp')"><i class="fab fa-whatsapp" style="color: green; font-size: 70px;"></i></a>
-  </div>
-
-
-<div class="selection-links" style="align-items: center;">
-  <div class="link new-link" style="text-align: center;">
-<div class="items" style="text-align: center;">
-
-<h3 style="text-align: center; color: black; margin-bottom: 5px;">MY PROJECTS</h3>
 
 
 <!-- Insert site owner's sound cloud/spotify/apple music projects, including other links -->
@@ -144,38 +181,81 @@
 
 <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1093681141&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-97725819" title="Rictus Ivy" target="_blank" style="color: #cccccc; text-decoration: none;">Rictus Ivy</a> · <a href="https://soundcloud.com/user-97725819/easy-ft-rapid-the-teller" title="Easy - Ft Rapid The Teller &amp; INKUNDZI" target="_blank" style="color: #cccccc; text-decoration: none;">Easy - Ft Rapid The Teller &amp; INKUNDZI</a></div>
 </div>
+</div>
 
 
-
-<button onclick="window.location.href='funding.html';">
+</div>
+<button onclick="window.location.href='funding.html';" style="text-align: center; border-radius: 15px; padding: 5px">
 					<i class="fa-solid fa-hand-holding-dollar"></i>Sponsor Me
 				</button>
-<button onclick="window.location.href='index.html';" style="text-align: center;">
+<button onclick="window.location.href='index.html';" style="text-align: center; border-radius: 15px; padding: 5px">
 					<i class="fa-solid fa-house"></i>Home
 				</button>
 <div class="gallaries" style="text-align: center;">
-<img src="Images/Pluga Logo3.png" style="text-align: center; width: 40px; height: auto;">
 </div>
 <iframe id=""src="" frameborder="0"></iframe>
-<div class="widget" style="font-size: 7px; margin-top: 70px;">
+
+
+
+
+
+    <!-- Insert site owner's whatsapp contact number -->
+
+<script>
+  function copyToWhatsApp(productName, price, imageSrc) {
+    // Format the message with product name and price as caption of the image
+    const message = `Hi there😀 can i please get this track, yooh i need it on my playlist :${productName}`;
+    
+    // Encode the message to handle special characters and spaces
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Open WhatsApp API with the formatted message
+    window.open(`https://api.whatsapp.com/send?phone=+27665637164&text=${encodedMessage}`);
+  }
+</script>
+
+
+      </div>
+    </div>
+    <div class="share-button" onclick="showSocialPlatforms()"><i class="fas fa-share"></i>Share Plug</div>
+
+
+
+
+<!-- Insert site/plug sharing links -->
+  <div class="social-platforms">
+    <a href="https://rapid-profiled.netlify.app/projects.html" onclick="shareLink('facebook')"><i class="fab fa-facebook" style="color: blue; font-size: 70px;"></i></a>
+    <a href="https://rapid-profiled.netlify.app/projects.html" onclick="shareLink('instagram')"><i class="fab fa-instagram" style="color: purple; font-size: 70px;"></i></a>
+    <a href="https://rapid-profiled.netlify.app/projects.html" onclick="shareLink('email')"><i class="fas fa-envelope" style="color: red; font-size: 70px;"></i></a>
+    <a href="https://rapid-profiled.netlify.app/projects.html" onclick="shareLink('whatsapp')"><i class="fab fa-whatsapp" style="color: green; font-size: 70px;"></i></a>
+  </div>
+
+
+
+ <div class="widget" style="font-size: 7px; margin-top: 5px; text-align: center;">
                     <ul class="style2">
                       <li><a href="https://www.termsfeed.com/live/1ab1c651-5b25-43e4-8812-d7e8658a1dd3">Privacy Policy</a></li>
                       <li><a href="https://www.termsfeed.com/live/07228ddf-8948-43c8-8992-679d5a7536e2">terms</a></li>
                     </ul>
                   </div>
     </div>
-
-	<footer>
+<div class="gallaries" style="text-align: center; margin-top: 12px">
+<img src="Images/Pluga Logo3.png" style="text-align: center; width: 15px; height: auto;">
+</div>
+  <footer style="text-align: center;">
 <div class="outer-footer">
     <p style="font-size: x-small; border: none; background-color: transparent;">  Copyright &copy; 2023 <a href="https://www.blossomvelder.co.za">@Blossom Velder pty, Ltd.</a> All Rigths Reserved</p>
   </div>
-  	</div>				
-			</div>
-		</div>
-	</div>
+    </div>        
+      </div>
+    </div>
+  </div>
 </div>
 </footer>
-<script src="pluga.js"></script>
+
+<script src="site.js"></script>
 <script src="main.js"></script>
+<script src="pluga.js"></script>
+
 </body>
 </html>
