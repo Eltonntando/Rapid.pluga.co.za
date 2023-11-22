@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="shortcut icon" type="x-icon" href="Images/Pluga Logo3.png">
-	<title>selling-page</title>
-	<link rel="stylesheet" href="pluga.css" />
-  <link rel="stylesheet" href="main.css" />
+    <link rel="shortcut icon" type="x-icon" href="Images/Pluga Logo3.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
 
-	<!-- Font Awesome icon cdn -->
-	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-	integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-	<script src="https://kit.fontawesome.com/60300003df5a9.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!-- custom css  -->
+    <link rel="stylesheet" href="site.css" />
+    <link rel="stylesheet" href="main.css" />
 
+    <!-- font awesome cdn  -->
+  <script src="https://kit.fontawesome.com/46b7ceee20.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <script src="https://kit.fontawesome.com/61003df5a9.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <style>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+
+
+<style>
     .share-button {
       background-color: #4CAF50;
       color: white;
-      padding: 10px;
       border: none;
+      padding: 10px;
       border-radius: 14px;
       cursor: pointer;
       display: inline-block;
-      align-self: left;
-      margin-right: 70%;
-      margin-bottom: 10%;
+      margin-bottom: 10px;
+      margin-left: 0%;
+      margin-top: 12px;
     }
 
     .social-platforms {
@@ -37,6 +46,8 @@
       justify-content: center;
       align-items: center;
       margin-top: 10px;
+      padding-bottom: 10px;
+      margin-right: 5px;
     }
 
     .social-platforms a {
@@ -45,14 +56,14 @@
       font-size: 30px;
     }
   </style>
-    <script>
+  <script>
     function showSocialPlatforms() {
       const socialPlatforms = document.querySelector('.social-platforms');
       socialPlatforms.classList.toggle('show');
     }
 
     function shareLink(platform) {
-      var linkToShare = "https://rapid-profiled.netlify.app/selling.html"; // Replace with your link to share
+      var linkToShare = "https://rapid-profiled.netlify.app/selling2.html"; // Replace with your link to share
       var socialUrl;
 
       if (platform === 'facebook') {
@@ -69,27 +80,57 @@
     }
   </script>
 
+
+
 </head>
 <body>
+    <!-- home page  -->
+    <div style="hight: 100%; width: 80%; align-self: center; margin-left: 10%;">
+        <!-- header section  -->
+        <div class="header-section">
+            <!-- header logo  -->
+            <div class="header-logo">
+                <h1 style="background-color: transparent;">RapidTheTeller.</h1>
+            </div>
+
+            <!-- header navigation  -->
+            <div class="header-nav">
+                <div class="mobile-nav-bar">
+                    <i class="fa-solid fa-bars" id="mobile-nav-bar-icon"></i>
+                </div>
+                <ul class="header-nav-list" id="header-nav-list">
 
 
-	<div class="wrapper">
-		<div class="page">
-	<div class="cover" style="height: auto; width: auto; background-color: transparent; border-radius: 95px; margin-top: 20px;">
-		</div>
+                    <li class="header-nav-tab">
+                        <a href="selling2.html" >Services</a>
+                    </li >
 
-			<div class="buttons" style="text-align: center;">
-				<button onclick="window.location.href='gallery.html';">
-					<i class="fa-solid fa-image"></i>Gallery
-				</button>
+                    <li class="header-nav-tab">
+                        <a href="index.html" >Home</a>
+                    </li >
+                    <li class="header-nav-tab ">
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="header-nav-tab">
+                        <a href="projects.html">Music</a>
+                    </li>
+                  
+                    <li class="header-nav-tab">
+                        <a href="selling.html">Merch</a>
+                    </li>
+                    <li class="header-nav-tab">
+                        <a href="booking.html" >Bookings</a>
+                    </li >
+                    
+                    <span class="highlight"></span>
+                </ul>
 
-			<button onclick="window.location.href='index.html';">
-					<i class="fa-solid fa-house"></i>Home
-				</button>
-			</div>
-			
-			
-				
+                <div style="margin-left: 16px;" class="mode-change">
+                    <i class="fa-solid fa-moon" id="mode-change"></i>
+                </div>
+            </div>
+        </div>
+        
 
 <div class="selection-links" style="align-items: center;">
   <div class="link new-link" style="text-align: center;">
@@ -97,19 +138,7 @@
 
 
 <h3 style="text-align: center; color: black; margin-bottom: 5px;">Services</h3>
-
-
-<!-- Insert site/plug sharing links -->
-
 <div class="share-button" onclick="showSocialPlatforms()"><i class="fas fa-share"></i>Share Plug</div>
-  <div class="social-platforms">
-    <a href="https://rapid-profiled.netlify.app/selling2.html" onclick="shareLink('facebook')"><i class="fab fa-facebook" style="color: blue; font-size: 70px;"></i></a>
-    <a href="https://rapid-profiled.netlify.app/selling2.html" onclick="shareLink('instagram')"><i class="fab fa-instagram" style="color: purple; font-size: 70px;"></i></a>
-    <a href="https://rapid-profiled.netlify.app/selling2.html" onclick="shareLink('email')"><i class="fas fa-envelope" style="color: red; font-size: 70px;"></i></a>
-    <a href="https://rapid-profiled.netlify.app/selling2.html" onclick="shareLink('whatsapp')"><i class="fab fa-whatsapp" style="color: #4CAF50; font-size: 70px;"></i></a>
-  </div>
-</div>
-
 
 <div class="gallaries" style="text-align: center;">
 
@@ -125,7 +154,7 @@
       <a href=""><img src="" class="post-image" style="width:70%; height: auto; border-top-left-radius: 24px; border-top-right-radius: 24px; border: 5px solid white;"></a>
       <h2 style="text-align: center; align-items: center; width:70%; border-radius: 0px; margin-left: 15%;">R500/Track</h2>
       <p style="text-align: center; align-items: center; width:70%; height: auto; border-radius: 0px; margin-left: 15%">Song-Writing</p>
-      <button onclick="copyToWhatsApp('Song-Writing')" style="width:auto; background: #4CAF50; color: white; border-radius: 25px;">Inquire</button>
+      <button onclick="copyToWhatsApp('Song-Writing')" style="width:auto; background: #4CAF50; color: white; border-radius: 25px; border: none; padding: 4px;">Inquire</button>
       <div class="post-ratings-container" style="margin-right: 10px">
       <div class="post-rating">
         <span class="post-rating-button material-icons">thumb_up</span>
@@ -140,14 +169,15 @@
 </div>
   
   
-
+</div>
+<div class="covered" style="display: flex;">
 
     <div class="box" style="border: transparent; width:50%;">
       <div class="post" data-post-id="0300002">
       <a href=""><img src="" class="post-image" style="width:70%; height: auto; border-top-left-radius: 24px; border-top-right-radius: 24px; border: 5px solid white;"></a>
       <h2 style="text-align: center; align-items: center; width:70%; border-radius: 0px; margin-left: 15%;">R150/1hr</h2>
       <p style="text-align: center; align-items: center; width:70%; height: auto; border-radius: 0px; margin-left: 15%">Song-Writing Virtual class</p>
-      <button onclick="copyToWhatsApp('Song-Writing Virtual class')" style="width:auto; background: #4CAF50; color: white; border-radius: 25px;">Inquire</button>
+      <button onclick="copyToWhatsApp('Song-Writing Virtual class')" style="width:auto; background: #4CAF50; color: white; border-radius: 25px; border: none; padding: 4px;">Inquire</button>
       <div class="post-ratings-container" style="margin-right: 10px">
       <div class="post-rating">
         <span class="post-rating-button material-icons">thumb_up</span>
@@ -164,16 +194,15 @@
 
 
 </div>
-
-  
   <div class="covered" style="display: flex;">
+
 
     <div class="box" style="border: transparent; width:50%;">
       <div class="post" data-post-id="0300003">
       <a href=""><img src="" class="post-image" style="width:70%; height: auto; border-top-left-radius: 24px; border-top-right-radius: 24px; border: 5px solid white;"></a>
       <h2 style="text-align: center; align-items: center; width:70%; border-radius: 0px; margin-left: 15%;">R150/1hr</h2>
       <p style="text-align: center; align-items: center; width:70%; height: auto; border-radius: 0px; margin-left: 15%">Rap masterclass (Virtual)</p>
-      <button onclick="copyToWhatsApp('Rap masterclass (Virtual)')" style="width:auto; background: #4CAF50; color: white; border-radius: 25px;">Inquire</button>
+      <button onclick="copyToWhatsApp('Rap masterclass (Virtual)')" style="width:auto; background: #4CAF50; color: white; border-radius: 25px; border: none; padding: 4px;">Inquire</button>
       <div class="post-ratings-container" style="margin-right: 10px">
       <div class="post-rating">
         <span class="post-rating-button material-icons">thumb_up</span>
@@ -188,6 +217,8 @@
 </div>
 
 
+</div>
+<div class="covered" style="display: flex;">
 
 
     <div class="box" style="border: transparent; width:50%;">
@@ -195,7 +226,7 @@
       <a href=""><img src="" class="post-image" style="width:70%; height: auto; border-top-left-radius: 24px; border-top-right-radius: 24px; border: 5px solid white;"></a>
       <h2 style="text-align: center; align-items: center; width:70%; border-radius: 0px; margin-left: 15%;">R200/Monthly</h2>
       <p style="text-align: center; align-items: center; width:70%; height: auto; border-radius: 0px; margin-left: 15%">Music career mentorship</p>
-      <button onclick="copyToWhatsApp('Music career mentorship')" style="width:auto; background: #4CAF50; color: white; border-radius: 25px;">Inquire</button>
+      <button onclick="copyToWhatsApp('Music career mentorship')" style="width:auto; background: #4CAF50; color: white; border-radius: 25px; border: none; padding: 4px;">Inquire</button>
       <div class="post-ratings-container" style="margin-right: 10px">
       <div class="post-rating">
         <span class="post-rating-button material-icons">thumb_up</span>
@@ -228,34 +259,48 @@
 </script>
 
 
-<button onclick="window.location.href='index.html';" style="text-align: center;">
-					<i class="fa-solid fa-house"></i>Home
-				</button>
-</div>
-<div class="gallaries" style="text-align: center;">
-<img src="Images/Pluga Logo3.png" style="text-align: center; width: 40px; height: auto; margin-top: 15px;">
-</div>
-<iframe id=""src="" frameborder="0"></iframe>
-<div class="widget" style="font-size: 7px; margin-top: 70px;">
+
+
+      </div>
+    </div>
+    
+
+
+
+
+<!-- Insert site/plug sharing links -->
+  <div class="social-platforms">
+    <a href="https://rapid-profiled.netlify.app/selling2.html" onclick="shareLink('facebook')"><i class="fab fa-facebook" style="color: blue; font-size: 70px;"></i></a>
+    <a href="https://rapid-profiled.netlify.app/selling2.html" onclick="shareLink('instagram')"><i class="fab fa-instagram" style="color: purple; font-size: 70px;"></i></a>
+    <a href="https://rapid-profiled.netlify.app/selling2.html" onclick="shareLink('email')"><i class="fas fa-envelope" style="color: red; font-size: 70px;"></i></a>
+    <a href="https://rapid-profiled.netlify.app/selling2.html" onclick="shareLink('whatsapp')"><i class="fab fa-whatsapp" style="color: green; font-size: 70px;"></i></a>
+  </div>
+
+
+
+ <div class="widget" style="font-size: 7px; margin-top: 5px; text-align: center;">
                     <ul class="style2">
                       <li><a href="https://www.termsfeed.com/live/1ab1c651-5b25-43e4-8812-d7e8658a1dd3">Privacy Policy</a></li>
                       <li><a href="https://www.termsfeed.com/live/07228ddf-8948-43c8-8992-679d5a7536e2">terms</a></li>
                     </ul>
                   </div>
     </div>
-
-
-	<footer>
+<div class="gallaries" style="text-align: center; margin-top: 12px">
+<img src="Images/Pluga Logo3.png" style="text-align: center; width: 15px; height: auto;">
+</div>
+  <footer style="text-align: center;">
 <div class="outer-footer">
     <p style="font-size: x-small; border: none; background-color: transparent;">  Copyright &copy; 2023 <a href="https://www.blossomvelder.co.za">@Blossom Velder pty, Ltd.</a> All Rigths Reserved</p>
   </div>
-  	</div>				
-			</div>
-		</div>
-	</div>
+    </div>        
+      </div>
+    </div>
+  </div>
 </div>
 </footer>
-<script src="pluga.js"></script>
+
+<script src="site.js"></script>
 <script src="main.js"></script>
+<script src="pluga.js"></script>
 </body>
 </html>
