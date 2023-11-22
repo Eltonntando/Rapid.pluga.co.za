@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="shortcut icon" type="x-icon" href="Images/Pluga Logo3.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <!-- font awesome cdn  -->
+  <script src="https://kit.fontawesome.com/46b7ceee20.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <script src="https://kit.fontawesome.com/61003df5a9.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <!-- custom css  -->
+    <link rel="stylesheet" href="site.css">
+
+
+<style>
+		.share-button {
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			padding: 10px;
+			border-radius: 14px;
+			cursor: pointer;
+			display: inline-block;
+			margin-bottom: 10px;
+			margin-left: 10%;
+			margin-top: 12px;
+		}
+
+		.social-platforms {
+			display: none;
+		}
+
+		.social-platforms.show {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 10px;
+			padding-bottom: 10px;
+			margin-right: 5px;
+		}
+
+		.social-platforms a {
+			margin: 8px;
+			color: white;
+			font-size: 30px;
+		}
+	</style>
+	<script>
+		function showSocialPlatforms() {
+			const socialPlatforms = document.querySelector('.social-platforms');
+			socialPlatforms.classList.toggle('show');
+		}
+
+		function shareLink(platform) {
+			var linkToShare = "https://avatar-pluga.netlify.app/about.html"; // Replace with your link to share
+			var socialUrl;
+
+			if (platform === 'facebook') {
+				socialUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(linkToShare);
+			} else if (platform === 'instagram') {
+				socialUrl = 'https://www.instagram.com/share?url=' + encodeURIComponent(linkToShare);
+			} else if (platform === 'email') {
+				socialUrl = 'mailto:?body=' + encodeURIComponent(linkToShare);
+			} else if (platform === 'whatsapp') {
+				socialUrl = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(linkToShare);
+			}
+
+			window.open(socialUrl, '_blank');
+		}
+	</script>
+
+
+
+</head>
+<body>
+    <!-- home page  -->
+    <div style="hight: 100%; width: 80%; align-self: center; margin-left: 10%;">
+        <!-- header section  -->
+        <div class="header-section">
+            <!-- header logo  -->
+            <div class="header-logo">
+                <h1 style="background-color: transparent;">RapidTheTeller.</h1>
+            </div>
+
+            <!-- header navigation  -->
+            <div class="header-nav">
+                <div class="mobile-nav-bar">
+                    <i class="fa-solid fa-bars" id="mobile-nav-bar-icon"></i>
+                </div>
+                <ul class="header-nav-list" id="header-nav-list">
+
+
+                	<li class="header-nav-tab">
+                        <a href="about.html" >About</a>
+                    </li >
+
+                	<li class="header-nav-tab">
+                        <a href="index.html" >Home</a>
+                    </li >
+                    <li class="header-nav-tab ">
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="header-nav-tab">
+                        <a href="projects.html">Music</a>
+                    </li>
+                  
+                    <li class="header-nav-tab">
+                        <a href="selling2.html">Services</a>
+                    </li>
+                    <li class="header-nav-tab">
+                        <a href="selling.html">Merch</a>
+                    </li>
+                    <li class="header-nav-tab">
+                        <a href="booking.html" >Bookings</a>
+                    </li >
+                    
+                    <span class="highlight"></span>
+                </ul>
+
+                <div style="margin-left: 16px;" class="mode-change">
+                    <i class="fa-solid fa-moon" id="mode-change"></i>
+                </div>
+            </div>
+        </div>
+        <!-- hero section  -->
+        <div class="hero-section">
+            <!-- hero content section  -->
+            <div class="hero-content">
+                <div class="content-header">
+                    <h1 style="background-color: transparent;">About Me</h1>
+                   </p>
+                </div>
+                
+            </div>
+            
+
+				
+				<!-- About details -->
+        
+        <div>
+        	<p style="background-color: transparent;">
+        		Rapid the teller here, I'm a young South African hipop artist, i do rap and also sing. I am a brand ambassador looking foward to working with growing brands and other relavant artists, aswell looking foward to being the voice for the youth of South Africa and the whole world, i call that ambition. For bookings go to the bookings section/call/e-mail me.
+        	</p>
+    	</div>
+    	</div>
+		</div>
+		<div class="share-button" onclick="showSocialPlatforms()"><i class="fas fa-share"></i>Share Plug</div>
+
+
+
+
+<!-- Insert site/plug sharing links -->
+	<div class="social-platforms">
+		<a href="https://rapid-profiled.netlify.app/about.html" onclick="shareLink('facebook')"><i class="fab fa-facebook" style="color: blue; font-size: 70px;"></i></a>
+		<a href="https://rapid-profiled.netlify.app/about.html" onclick="shareLink('instagram')"><i class="fab fa-instagram" style="color: purple; font-size: 70px;"></i></a>
+		<a href="https://rapid-profiled.netlify.app/about.html" onclick="shareLink('email')"><i class="fas fa-envelope" style="color: red; font-size: 70px;"></i></a>
+		<a href="https://rapid-profiled.netlify.app/about.html" onclick="shareLink('whatsapp')"><i class="fab fa-whatsapp" style="color: green; font-size: 70px;"></i></a>
+	</div>
+
+
+
+ <div class="widget" style="font-size: 7px; margin-top: 5px; text-align: center;">
+                    <ul class="style2">
+                      <li><a href="https://www.termsfeed.com/live/1ab1c651-5b25-43e4-8812-d7e8658a1dd3">Privacy Policy</a></li>
+                      <li><a href="https://www.termsfeed.com/live/07228ddf-8948-43c8-8992-679d5a7536e2">terms</a></li>
+                    </ul>
+                  </div>
+    </div>
+<div class="gallaries" style="text-align: center; margin-top: 12px">
+<img src="Images/Pluga Logo3.png" style="text-align: center; width: 15px; height: auto;">
+</div>
+	<footer style="text-align: center;">
+<div class="outer-footer">
+    <p style="font-size: x-small; border: none; background-color: transparent;">  Copyright &copy; 2023 <a href="https://www.blossomvelder.co.za">@Blossom Velder pty, Ltd.</a> All Rigths Reserved</p>
+  </div>
+  	</div>				
+			</div>
+		</div>
+	</div>
+</div>
+</footer>
+
+<script src="site.js"></script>
+<script src="pluga.js"></script>
+</body>
+</html>
