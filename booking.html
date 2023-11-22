@@ -1,28 +1,37 @@
-h<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="shortcut icon" type="x-icon" href="Images/Pluga Logo3.png">
-  <title>bookings</title>
-  <link rel="stylesheet" href="pluga.css" />
-  <!-- Font Awesome icon cdn -->
+    <link rel="shortcut icon" type="x-icon" href="Images/Pluga Logo3.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings</title>
+       <!-- font awesome cdn  -->
+  <script src="https://kit.fontawesome.com/46b7ceee20.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
   integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <script src="https://kit.fontawesome.com/61003df5a9.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-  <style>
+
+    <!-- custom css  -->
+    <link rel="stylesheet" href="site.css">
+
+
+<style>
     .share-button {
       background-color: #4CAF50;
       color: white;
-      padding: 10px;
       border: none;
+      padding: 10px;
       border-radius: 14px;
       cursor: pointer;
       display: inline-block;
-      align-self: left;
-      margin-right: 70%;
-      margin-bottom: 5%;
+      margin-bottom: 10px;
+      margin-left: 10%;
+      margin-top: 12px;
     }
 
     .social-platforms {
@@ -34,6 +43,8 @@ h<!DOCTYPE html>
       justify-content: center;
       align-items: center;
       margin-top: 10px;
+      padding-bottom: 10px;
+      margin-right: 5px;
     }
 
     .social-platforms a {
@@ -66,20 +77,21 @@ h<!DOCTYPE html>
     }
   </script>
 
-</head>
 
-  <title>Booking Section</title>
+
+
+
   <style>
     .container {
-      width: 400px;
+      width: 95%;
       margin: 0 auto;
-      background-color: orange;
+      background-color: white;
       border-radius: 14px;
       padding-bottom: 10px;
     }
 
     label {
-      display: block;
+      display: white;
       margin-top: 10px;
     }
 
@@ -98,21 +110,28 @@ h<!DOCTYPE html>
       background-color: #4CAF50;
       color: #fff;
       cursor: pointer;
+      border-radius: 10px;
     }
 
+    .booking-message {
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    .p {color: white;}
 
 
   </style>
-  <script>
-     function sendBookingDetails() {
-      // Get the input values
+<script>
+    function sendBookingDetails() {
       var clientName = document.getElementById('client-name').value;
       var contactNumber = document.getElementById('contact-number').value;
       var emailAddress = document.getElementById('email-address').value;
       var eventDescription = document.getElementById('event-description').value;
       var eventDate = document.getElementById('event-date').value;
 
-      // Compose the message
       var message = "Client Name: " + clientName + "\n"
             + "Contact Number: " + contactNumber + "\n"
             + "Email Address: " + emailAddress + "\n"
@@ -120,42 +139,83 @@ h<!DOCTYPE html>
             + "Event Date: " + eventDate;
 
 
-      // Insert owner's e-mail & whatsapp contact number
+ // Insert site owner's contacts for: WhatsApp & E-mail
 
-
-      // Send via email
       var emailLink = "mailto:wakitsinkuna028@gmail.com?subject=Booking Request&body=" + encodeURIComponent(message);
-
-      // Send via WhatsApp
       var whatsappLink = "https://wa.me/+27665637164/?text=" + encodeURIComponent(message);
-
-      // Choose the platform based on user selection
       var platform = document.getElementById('platform').value;
+      
       if (platform === 'email') {
-        window.location.href = emailLink;
+        // Open the email link in a new tab/window
+        window.open(emailLink, '_blank');
       } else if (platform === 'whatsapp') {
+        // Open the WhatsApp link in a new tab/window
         window.open(whatsappLink, '_blank');
       }
+      
+      // Display the booking details in a distinct style
+      var bookingMessageElement = document.createElement('div');
+      bookingMessageElement.classList.add('booking-message');
+      bookingMessageElement.textContent = message;
+      document.body.appendChild(bookingMessageElement);
     }
   </script>
+
 </head>
 <body>
+    <!-- home page  -->
+    <div style="hight: 100%; width: 80%; align-self: center; margin-left: 10%;">
+        <!-- header section  -->
+        <div class="header-section">
+            <!-- header logo  -->
+            <div class="header-logo">
+                <h1 style="background-color: transparent;">RapidTheTeller.</h1>
+            </div>
+
+            <!-- header navigation  -->
+            <div class="header-nav">
+                <div class="mobile-nav-bar">
+                    <i class="fa-solid fa-bars" id="mobile-nav-bar-icon"></i>
+                </div>
+                <ul class="header-nav-list" id="header-nav-list">
 
 
+                    <li class="header-nav-tab">
+                        <a href="booking.html" >Bookings</a>
+                    </li >
+
+                    <li class="header-nav-tab">
+                        <a href="index.html" >Home</a>
+                    </li >
+                    <li class="header-nav-tab ">
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="header-nav-tab">
+                        <a href="projects.html">Music</a>
+                    </li>
+                    <li class="header-nav-tab">
+                        <a href="selling2.html">Services</a>
+                    </li>
+                    <li class="header-nav-tab">
+                        <a href="selling.html">Merch</a>
+                    </li>
+                    
+                    <span class="highlight"></span>
+                </ul>
+
+                <div style="margin-left: 16px;" class="mode-change">
+                    <i class="fa-solid fa-moon" id="mode-change"></i>
+                </div>
+            </div>
+        </div>
+            
+
+        
+        <!-- Booking details -->
   <div class="wrapper">
     <div class="page">
   <div class="cover" style="height: auto; width: auto; background-color: transparent; border-radius: 95px; margin-top: 20px;">
     </div>
-
-      <div class="buttons" style="text-align: center;">
-        <button onclick="window.location.href='gallery.html';">
-          <i class="fa-solid fa-image"></i>Gallery
-        </button>
-
-      <button onclick="window.location.href='index.html';">
-          <i class="fa-solid fa-house"></i>Home
-        </button>
-      </div>
       
       
         
@@ -165,20 +225,22 @@ h<!DOCTYPE html>
 <div class="items" style="text-align: center;">
 
 
+
 <!-- Insert site owner's booking details -->
 
+
 <div>
-  <h2>Booking Details</h2>
+  <h2>Booking</h2>
   <p>
-  ⭐Live Performance - Fee is negotiable⭐
+  Live Performance - Fee is negotiable
   <br>
-  ⭐Event Hosting - Fee is negotiable⭐
+  Event Hosting - Fee is negotiable
   </p>
 
 </div>
 
-  <div class="container">
-    <h2>Booking Section</h2>
+  <div style="margin-top: 15px" class="container">
+    
     <label for="event-name">Name:</label>
     <input type="text" id="client-name">
 
@@ -200,36 +262,36 @@ h<!DOCTYPE html>
       <option value="whatsapp">WhatsApp</option>
     </select>
   </div>
-    <button onclick="sendBookingDetails()"><i class="fa-solid fa-paper-plane"></i></button>
+    <button style="border: none; padding: 10px;" onclick="sendBookingDetails()"><i class="fa-solid fa-paper-plane"></i></button>
   </div>
 </div>
 
+    <div class="share-button" onclick="showSocialPlatforms()"><i class="fas fa-share"></i>Share Plug</div>
+
+
+
 
 <!-- Insert site/plug sharing links -->
-
-<div class="share-button" onclick="showSocialPlatforms()"><i class="fas fa-share"></i>Share Plug</div>
   <div class="social-platforms">
     <a href="https://rapid-profiled.netlify.app/booking.html" onclick="shareLink('facebook')"><i class="fab fa-facebook" style="color: blue; font-size: 70px;"></i></a>
     <a href="https://rapid-profiled.netlify.app/booking.html" onclick="shareLink('instagram')"><i class="fab fa-instagram" style="color: purple; font-size: 70px;"></i></a>
     <a href="https://rapid-profiled.netlify.app/booking.html" onclick="shareLink('email')"><i class="fas fa-envelope" style="color: red; font-size: 70px;"></i></a>
     <a href="https://rapid-profiled.netlify.app/booking.html" onclick="shareLink('whatsapp')"><i class="fab fa-whatsapp" style="color: green; font-size: 70px;"></i></a>
   </div>
-</div>
 
-<div class="gallaries" style="text-align: center;">
-<img src="Images/Pluga Logo3.png" style="text-align: center; width: 40px; height: auto; margin-top: 40px;">
-</div>
 
-<iframe id=""src="" frameborder="0"></iframe>
-<div class="widget" style="font-size: 7px; margin-top: 70px;">
+
+ <div class="widget" style="font-size: 7px; margin-top: 5px; text-align: center; link-style: none; text-decoration: none;">
                     <ul class="style2">
                       <li><a href="https://www.termsfeed.com/live/1ab1c651-5b25-43e4-8812-d7e8658a1dd3">Privacy Policy</a></li>
                       <li><a href="https://www.termsfeed.com/live/07228ddf-8948-43c8-8992-679d5a7536e2">terms</a></li>
                     </ul>
                   </div>
     </div>
-
-  <footer>
+<div class="gallaries" style="text-align: center; margin-top: 12px">
+<img src="Images/Pluga Logo3.png" style="text-align: center; width: 15px; height: auto;">
+</div>
+  <footer style="text-align: center;">
 <div class="outer-footer">
     <p style="font-size: x-small; border: none; background-color: transparent;">  Copyright &copy; 2023 <a href="https://www.blossomvelder.co.za">@Blossom Velder pty, Ltd.</a> All Rigths Reserved</p>
   </div>
@@ -239,6 +301,8 @@ h<!DOCTYPE html>
   </div>
 </div>
 </footer>
+
+<script src="site.js"></script>
 <script src="pluga.js"></script>
 </body>
 </html>
